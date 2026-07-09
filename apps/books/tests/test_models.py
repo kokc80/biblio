@@ -58,26 +58,26 @@ class BookModelTest(TestCase):
         self.assertIsNotNone(book.created_at)
         self.assertIsNotNone(book.updated_at)
 
-#     def test_create_book_with_minimal_data(self):
-#         """Тест: создание книги с минимальными данными"""
-#         book = Book.objects.create(
-#             title="Анна Каренина",
-#             author=self.author,
-#             isbn="9785170909045",
-#             publication_year=1877
-#         )
-#
-#         self.assertEqual(book.title, "Анна Каренина")
-#         self.assertEqual(book.author, self.author)
-#         self.assertEqual(book.isbn, "9785170909045")
-#         self.assertEqual(book.publication_year, 1877)
-#         # Проверяем значения по умолчанию
-#         self.assertEqual(book.genre, "OTHER")
-#         self.assertEqual(book.publisher, "")
-#         self.assertEqual(book.description, "")
-#         self.assertEqual(book.total_copies, 1)
-#         self.assertEqual(book.available_copies, 1)
-#
+    def test_create_book_with_minimal_data(self):
+        """Тест: создание книги с минимальными данными"""
+        book = Book.objects.create(
+            title="Анна Каренина",
+            author=self.author,
+            isbn="9785170909045",
+            publication_year=1877
+        )
+
+        self.assertEqual(book.title, "Анна Каренина")
+        self.assertEqual(book.author, self.author)
+        self.assertEqual(book.isbn, "9785170909045")
+        self.assertEqual(book.publication_year, 1877)
+        # Проверяем значения по умолчанию
+        self.assertEqual(book.genre, "OTHER")
+        self.assertEqual(book.publisher, "")
+        self.assertEqual(book.description, "")
+        self.assertEqual(book.total_copies, 1)
+        self.assertEqual(book.available_copies, 1)
+
     def test_create_book_without_title_should_fail(self):
         """Тест: создание книги без названия должно вызвать ошибку"""
         with self.assertRaises(IntegrityError):
