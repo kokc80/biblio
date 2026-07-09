@@ -1,6 +1,5 @@
 from django.test import TestCase
 from django.db import IntegrityError
-from django.utils import timezone
 from datetime import date
 from apps.authors.models import Author
 from apps.books.models import Book
@@ -29,9 +28,9 @@ class BookModelTest(TestCase):
         }
         self.book = Book.objects.create(**self.book_data)
 
-
     # ----- Тесты создания -----
     def test_create_book_with_all_fields(self):
+
         """Тест: создание книги со всеми полями"""
         book = Book.objects.create(
             title="Преступление и наказание",
@@ -188,4 +187,3 @@ class BookModelTest(TestCase):
             available_copies=0
         )
         self.assertFalse(book.is_available())
-

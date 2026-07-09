@@ -4,7 +4,7 @@ from django.db import models
 class Author(models.Model):
     first_name = models.CharField(max_length=100, verbose_name="Имя автора")
     last_name = models.CharField(max_length=100, verbose_name="Фамилия автора")
-    birth_date = models.DateField(null=True, blank=True,  verbose_name="Дата рождения автора")
+    birth_date = models.DateField(null=True, blank=True, verbose_name="Дата рождения автора")
     biography = models.TextField(blank=True, verbose_name="Библиография")
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата создания")
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Дата обновления")

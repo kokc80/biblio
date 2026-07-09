@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from apps.authors.models import Author
 from apps.books.models import Book
 
+
 @pytest.fixture
 def test_author():
     return Author.objects.create(
@@ -11,12 +12,14 @@ def test_author():
         country="Тестландия"
     )
 
+
 @pytest.fixture
 def test_user():
     return User.objects.create_user(
         username="testuser",
         password="testpass123"
     )
+
 
 @pytest.fixture
 def test_book(test_author):
