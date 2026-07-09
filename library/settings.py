@@ -34,6 +34,10 @@ INSTALLED_APPS = [
     'apps.loans',
 ]
 
+SWAGGER_SETTINGS = {
+    'USE_COMPAT_RENDERERS': False,
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'corsheaders.middleware.CorsMiddleware',  # Добавьте в начало
