@@ -1,7 +1,9 @@
-from django.db import models
-from django.conf import settings
-from apps.books.models import Book
 from datetime import date, timedelta
+
+from django.conf import settings
+from django.db import models
+
+from apps.books.models import Book
 
 
 class Loan(models.Model):

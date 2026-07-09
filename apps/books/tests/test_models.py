@@ -1,6 +1,8 @@
-from django.test import TestCase
-from django.db import IntegrityError
 from datetime import date
+
+from django.db import IntegrityError
+from django.test import TestCase
+
 from apps.authors.models import Author
 from apps.books.models import Book
 
