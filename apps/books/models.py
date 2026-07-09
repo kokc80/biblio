@@ -16,17 +16,17 @@ class Book(models.Model):
         ("OTHER", "Other"),
     ]
 
-    title = models.CharField(max_length=200)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name="books")
-    isbn = models.CharField(max_length=13, unique=True)
-    genre = models.CharField(max_length=20, choices=GENRE_CHOICES, default="OTHER")
-    publication_year = models.IntegerField()
-    publisher = models.CharField(max_length=200, blank=True)
-    description = models.TextField(blank=True)
-    total_copies = models.IntegerField(default=1)
-    available_copies = models.IntegerField(default=1)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    title = models.CharField(max_length=200, verbose_name="Название книги")
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, verbose_name="Автор книги", related_name="books")
+    isbn = models.CharField(max_length=13, unique=True, verbose_name="Международный стандартный книжный номер")
+    genre = models.CharField(max_length=20, choices=GENRE_CHOICES, verbose_name="Жанр книги", default="OTHER")
+    publication_year = models.IntegerField(verbose_name="Год публикации")
+    publisher = models.CharField(max_length=200, blank=True, verbose_name="Публикатор")
+    description = models.TextField(blank=True, verbose_name="Примечание")
+    total_copies = models.IntegerField(default=1, verbose_name="Количество копий")
+    available_copies = models.IntegerField(default=1, verbose_name="Доступные копии")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата создания")
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="Дата обновления")
 
     class Meta:
         ordering = ["title"]
