@@ -6,8 +6,8 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APIClient
 
-from apps.authors.models import Author
-from apps.books.models import Book
+from authors.models import Author
+from books.models import Book
 
 User = get_user_model()
 

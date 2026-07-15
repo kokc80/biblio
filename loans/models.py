@@ -3,7 +3,7 @@ from datetime import date, timedelta
 from django.conf import settings
 from django.db import models
 
-from apps.books.models import Book
+from books.models import Book
 
 
 class Loan(models.Model):

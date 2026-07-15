@@ -1,8 +1,8 @@
 import pytest
 from django.contrib.auth.models import User
 
-from apps.authors.models import Author
-from apps.books.models import Book
+from authors.models import Author
+from books.models import Book
 
 
 @pytest.fixture

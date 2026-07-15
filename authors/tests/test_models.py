@@ -4,7 +4,7 @@ from django.db import IntegrityError
 from django.test import TestCase
 from django.utils import timezone
 
-from apps.authors.models import Author
+from authors.models import Author
 
 
 class AuthorModelTest(TestCase):

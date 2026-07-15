@@ -29,10 +29,10 @@ INSTALLED_APPS = [
     'corsheaders',
     'drf_yasg',
     # Local apps
-    'apps.authors',
-    'apps.books',
-    'apps.users',
-    'apps.loans',
+    'authors',
+    'books',
+    'users',
+    'loans',
 ]
 
 SWAGGER_SETTINGS = {

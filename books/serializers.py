@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from apps.authors.models import Author
+from authors.models import Author
 
 from .models import Book
 
