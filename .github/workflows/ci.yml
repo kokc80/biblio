@@ -97,11 +97,11 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
-
+      # папка приложения
       - name: Create deployment directory
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
-            mkdir -p ${{ secrets.DEPLOY_DIR }}
+            mkdir -p ${{ secrets.DEPLOY_DIR }} 
           EOF
 
       - name: Copy project files to server # копирование данных на сервер
